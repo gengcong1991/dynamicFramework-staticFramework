@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		4595ECD84DF53D7940D7858A /* Pods_TestFrameworkExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05BBDA8299112B532282866E /* Pods_TestFrameworkExample.framework */; };
-		FE7A964B2DFC13E10012B13F /* TestFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE86E9652DFABD9E00280456 /* TestFramework.framework */; };
-		FE7A964C2DFC13E10012B13F /* TestFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE86E9652DFABD9E00280456 /* TestFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FE7A97482DFC27990012B13F /* TestFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE86E9652DFABD9E00280456 /* TestFramework.framework */; };
+		FE7A97492DFC27990012B13F /* TestFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE86E9652DFABD9E00280456 /* TestFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FE7A96472DFC13DF0012B13F /* Embed Frameworks */ = {
+		FE7A97442DFC27950012B13F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FE7A964C2DFC13E10012B13F /* TestFramework.framework in Embed Frameworks */,
+				FE7A97492DFC27990012B13F /* TestFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,13 +45,9 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		FE7A96482DFC13DF0012B13F /* Exceptions for "TestFrameworkExample" folder in "Embed Frameworks" phase from "TestFrameworkExample" target */ = {
+		FE7A97452DFC27950012B13F /* Exceptions for "TestFrameworkExample" folder in "Embed Frameworks" build phase */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			attributesByRelativePath = {
-				MBProgressHUD.framework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
-				MJExtension.framework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
-			};
-			buildPhase = FE7A96472DFC13DF0012B13F /* Embed Frameworks */;
+			buildPhase = FE7A97442DFC27950012B13F /* Embed Frameworks */;
 			membershipExceptions = (
 				MBProgressHUD.framework,
 				MJExtension.framework,
@@ -64,7 +60,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				FE86E86A2DFAB58000280456 /* Exceptions for "TestFrameworkExample" folder in "TestFrameworkExample" target */,
-				FE7A96482DFC13DF0012B13F /* Exceptions for "TestFrameworkExample" folder in "Embed Frameworks" phase from "TestFrameworkExample" target */,
+				FE7A97452DFC27950012B13F /* Exceptions for "TestFrameworkExample" folder in "Embed Frameworks" build phase */,
 			);
 			path = TestFrameworkExample;
 			sourceTree = "<group>";
@@ -76,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE7A964B2DFC13E10012B13F /* TestFramework.framework in Frameworks */,
+				FE7A97482DFC27990012B13F /* TestFramework.framework in Frameworks */,
 				4595ECD84DF53D7940D7858A /* Pods_TestFrameworkExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +129,7 @@
 				FE86E8502DFAB57F00280456 /* Frameworks */,
 				FE86E8512DFAB57F00280456 /* Resources */,
 				51251D78B45626EB5A9421AD /* [CP] Embed Pods Frameworks */,
-				FE7A96472DFC13DF0012B13F /* Embed Frameworks */,
+				FE7A97442DFC27950012B13F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,13 +195,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TestFrameworkExample/Pods-TestFrameworkExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TestFrameworkExample/Pods-TestFrameworkExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -260,6 +252,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestFrameworkExample",
+					"$(PROJECT_DIR)/TestFrameworkExample/MJExtension",
+					"$(PROJECT_DIR)/TestFrameworkExample/MBProgressHUD",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestFrameworkExample/Info.plist;
@@ -307,6 +301,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TestFrameworkExample",
+					"$(PROJECT_DIR)/TestFrameworkExample/MJExtension",
+					"$(PROJECT_DIR)/TestFrameworkExample/MBProgressHUD",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestFrameworkExample/Info.plist;
