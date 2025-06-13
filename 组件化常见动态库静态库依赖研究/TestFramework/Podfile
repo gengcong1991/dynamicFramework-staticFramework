@@ -1,0 +1,32 @@
+platform :ios, '12.0'  # 既然在post_install中设置了12.0，这里也应该声明
+workspace 'TestFramework'
+
+target 'TestFrameworkExample' do
+project 'TestFrameworkExample/TestFrameworkExample'
+use_frameworks!
+pod 'YYCache'
+
+end
+
+target 'TestFramework' do
+project 'TestFramework.xcodeproj'
+use_frameworks!
+#use_frameworks! :linkage => :static  # 明确指定使用静态框架
+pod 'MBProgressHUD', '0.9.2'
+pod 'MJExtension', '3.0.17'
+end
+
+
+post_install do |installer|
+  # 1. 遍历项目中所有target
+  installer.pods_project.targets.each do |target|
+    # 2. 遍历build_configurations
+    target.build_configurations.each do |config|
+      # 4. 添加最低部署目标为iOS 12.0
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+    end
+  end
+end
+
+
+

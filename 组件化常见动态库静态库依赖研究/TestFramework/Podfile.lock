@@ -1,0 +1,24 @@
+PODS:
+  - MBProgressHUD (0.9.2)
+  - MJExtension (3.0.17)
+  - YYCache (1.0.4)
+
+DEPENDENCIES:
+  - MBProgressHUD (= 0.9.2)
+  - MJExtension (= 3.0.17)
+  - YYCache
+
+SPEC REPOS:
+  trunk:
+    - MBProgressHUD
+    - MJExtension
+    - YYCache
+
+SPEC CHECKSUMS:
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+
+PODFILE CHECKSUM: 003adbd5792b3979806bc02caea998af72891be2
+
+COCOAPODS: 1.16.2
